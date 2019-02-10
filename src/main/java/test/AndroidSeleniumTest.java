@@ -27,6 +27,14 @@ public class AndroidSeleniumTest {
 			driver.findElement(in.Repo.obj("Login_page.Password").sendKeys("Sphdigital1"));
 			driver.findElement(in.Repo.obj("Login_page.Continue")).click();
 			
+			// Getting SecurityException while launching the app from appium : application is not allowing to launch from test app.
+			/** C:\Users\LENOVO>adb shell am start -n  com.buuuk.st/com.sph.straitstimes.views.activities.MainContainerActivity
+			Starting: Intent { cmp=com.buuuk.st/com.sph.straitstimes.views.activities.MainContainerActivity }
+			Security exception: Permission Denial: starting Intent { flg=0x10000000 cmp=com.buuuk.st/com.sph.straitstimes.views.activities.MainContainerActivity } from null (pid=9064, uid=2000) not exported from uid 10158
+
+			java.lang.SecurityException: Permission Denial: starting Intent { flg=0x10000000 cmp=com.buuuk.st/com.sph.straitstimes.views.activities.MainContainerActivity } from null (pid=9064, uid=2000) not exported from uid 10158
+			*/
+			
 			//verify the user has logged in
 			
 			//Tap on the “latest” tab and tap on the first article
