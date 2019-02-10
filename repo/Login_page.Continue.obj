@@ -1,0 +1,6 @@
+#Sun Feb 10 18:47:04 SGT 2019
+context=NONINSTRUMENTED
+json={"id"\:"btn_ldap_login_continue","dumpElementType"\:"NONINSTRUMENTED","x"\:407,"y"\:890,"width"\:265,"height"\:113,"onScreen"\:true,"uniqueKeys"\:"id,text,index,resource-id","package"\:"com.buuuk.st","hidden"\:"false","checkable"\:"false","knownSuperClass"\:"android.widget.TextView","clickable"\:"true","index"\:"5","focusable"\:"false","enabled"\:"true","resource-id"\:"com.buuuk.st\:id/btn_ldap_login_continue","longClickable"\:"false","password"\:"false","top"\:"true","bounds"\:"[407,890][672,1003]","long-clickable"\:"false","text"\:"Continue","class"\:"android.widget.TextView","scrollable"\:"false","selected"\:"false"}
+page=Login_page
+by=xpath
+expression=//*[@text\='Continue' and @id\='btn_ldap_login_continue' and @resource-id\='com.buuuk.st\:id/btn_ldap_login_continue']

@@ -1,0 +1,6 @@
+#Sun Feb 10 18:44:54 SGT 2019
+json={"id"\:"et_ldap_login_username","dumpElementType"\:"NONINSTRUMENTED","x"\:96,"y"\:405,"width"\:888,"height"\:130,"onScreen"\:true,"uniqueKeys"\:"id,text,resource-id,focused","package"\:"com.buuuk.st","hidden"\:"false","checkable"\:"false","knownSuperClass"\:"android.widget.EditText","clickable"\:"true","index"\:"1","focusable"\:"true","enabled"\:"true","resource-id"\:"com.buuuk.st\:id/et_ldap_login_username","longClickable"\:"true","password"\:"false","top"\:"true","focused"\:"true","bounds"\:"[96,405][984,535]","long-clickable"\:"true","text"\:"Login Id","class"\:"android.widget.EditText","scrollable"\:"false","selected"\:"false"}
+context=NONINSTRUMENTED
+page=Login_page
+by=xpath
+expression=//*[@text\='Login Id' and @id\='et_ldap_login_username']
