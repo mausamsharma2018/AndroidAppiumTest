@@ -40,18 +40,13 @@ public class AndroidSeleniumTest {
 			driver.findElement(By.xpath("//android.widget.TextView[@index='2']")).click();//"//*[@text='I Agree' and @resource-id='com.buuuk.st:id/btn_tnc_ok']" )).click();   //
 			
 			// Swipe left to right to go to next page
-	        //The viewing size of the device
+	        //The viewing size of the device	2
 	        Dimension size = driver.manage().window().getSize();
 
-	        //x position set to mid-screen horizontally
+	        //x,y position set to mid-screen horizontally swipe	
 	        int width = size.width / 4;
-
-	        //Starting y location set to 80% of the height (near bottom)
 	        int startPoint = 1070;//(int) (size.getWidth() * 0.95);
-
-	        //Ending y location set to 20% of the height (near top)
 	        int endPoint = 1;//(int) (size.getWidth() * 0.05);
-
 	        new TouchAction(driver).press(PointOption.point(startPoint, width)).waitAction(WaitOptions
 	        		.waitOptions(Duration.ofMillis(2000))).moveTo(PointOption.point(endPoint, width)).release().perform();
 	        
@@ -95,16 +90,23 @@ public class AndroidSeleniumTest {
 			 // Touch on the screen to close the help alert
 			 new TouchAction(driver).press(PointOption.point(746, 1808)).release().perform();
 			 //Thread.sleep(4000);
+			 
 			//Verify that the article is loading successfully with images/videos.
 			WebElement articleContent = driver.findElement(By.xpath("//android.widget.TextView[@resource-id='com.buuuk.st:id/article_headline']"));
 			Assert.assertEquals(expected, articleContent.getText());
-	        Thread.sleep(4000);
-	        WebElement anyImageFile = driver.findElement(By.xpath("//android.widget.ImageView[@resource-id='com.buuuk.st:id/article_image']"));
-			Boolean ImagePresent = (Boolean) ((JavascriptExecutor) driver).executeScript(
-					"return arguments[0].complete && typeof arguments[0].naturalWidth != \"undefined\" && arguments[0].naturalWidth > 0",
-					anyImageFile);
-			Assert.assertTrue(ImagePresent);
+	        Thread.sleep(2000);
+	       
+			WebElement imageFile = driver.findElement(By.xpath("//android.widget.ImageView[@resource-id='com.buuuk.st:id/article_image']"));
+			
+			Assert.assertTrue(imageFile.isDisplayed());
 			System.out.println("Test Case Passed !!!");
+			//Click on the left side menu button
+	        driver.findElement(By.xpath("//android.widget.ImageButton[@index='0']")).click();
+	        Thread.sleep(1000);
+	        
+	        driver.findElement(By.xpath("//android.widget.TextView[@resource-id='com.buuuk.st:id/tv_logout']")).click();
+	        Thread.sleep(1000);
+			
 			
 	        driver.quit();
 		} catch (Exception e) {
